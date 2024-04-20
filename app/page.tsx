@@ -1,17 +1,20 @@
 import Image from "next/image";
+import { PokemonPageModel } from "./models/pokemon-page.model";
 
 export default async function PokemonPage() {
 
-  const getPokemons = async () => {
+  
+  const getPokemonPage = async (): Promise<PokemonPageModel | null> => {
     const data = fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
       .then(response => response.json())
-      .then(data => data.results)
+      .then(data => data)
     return data;
   }
-
-  const pokemons = await getPokemons();
-  console.log(pokemons);
-
+  
+  
+  const pokemonPage = await getPokemonPage();
+  console.log(pokemonPage);
+  
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">

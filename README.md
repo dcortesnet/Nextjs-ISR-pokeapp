@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nextjs SSR Pokeapp &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Getting Started
 
