@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { PokemonPageModel } from "./models/pokemon-page.model";
+import { PokemonPageModel } from "../models/pokemon-page.model";
 
 export default async function PokemonPage() {
 
