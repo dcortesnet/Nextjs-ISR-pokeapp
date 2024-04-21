@@ -2,8 +2,9 @@ import { PokemonPageModel } from "@/models/pokemon-page.model";
 import { PokemonModel } from "@/models/pokemon.model";
 
 export const getPokemonPage = async (
-  offset: number = 0
+  offset: number = 1
 ): Promise<PokemonPageModel> => {
+  offset = offset === 1 ? 0 : offset * 20;
   const response = await fetch(
     `https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`
   );
