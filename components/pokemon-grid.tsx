@@ -10,7 +10,7 @@ export default function PokemonGrid(props: PokemonGridProps) {
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-1">
       {props.pokemons.map((pokemon: PokemonModel) => {
         return (
-          <div className="p-2 rounded-lg border border-gray-300 flex justify-center cursor-pointer">
+          <div className="p-2 border border-gray-300 flex justify-center cursor-pointer">
             <div className="flex flex-col justify-center">
               <Image
                 src={pokemon.image}

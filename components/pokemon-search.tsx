@@ -4,9 +4,9 @@ export default function PokemonSearch() {
       <input
         type="text"
         placeholder="Pikachu"
-        className="px-4 py-2 rounded-lg border border-gray-300"
+        className="px-4 py-2  border border-gray-300"
       />
-      <button className="px-4 py-2 rounded-lg bg-blue-500 text-white sm:w-auto w-full">
+      <button className="px-4 py-2  bg-red-500 text-white sm:w-auto w-full">
         Buscar
       </button>
     </div>

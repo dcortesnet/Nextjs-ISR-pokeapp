@@ -8,7 +8,7 @@ interface PokemonDetailCardProps {
 export default function PokemonDetailCard(props: PokemonDetailCardProps) {
   return (
     <div className="flex mt-5 flex-col items-center text-slate-800">
-      <div className="relative flex flex-col items-center rounded-lg border border-gray-300 mx-auto bg-white bg-clip-border  p-3">
+      <div className="relative flex flex-col items-center  border border-gray-300 mx-auto bg-white bg-clip-border  p-3">
         <div className="mt-2 mb-8 w-full">
           <h1 className="px-2 text-xl font-bold text-slate-700 capitalize">
             #{props.pokemon.id} {props.pokemon.name}
@@ -24,7 +24,7 @@ export default function PokemonDetailCard(props: PokemonDetailCardProps) {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4 px-2 w-full">
-          <div className="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 rounded-lg border border-gray-300  ">
+          <div className="flex flex-col items-start justify-center  bg-white bg-clip-border px-3 py-4  border border-gray-300  ">
             <p className="text-sm text-gray-600">Types</p>
             <div className="text-base font-medium text-navy-700 flex">
               {props.pokemon.types.map((type: any) => (
@@ -35,14 +35,14 @@ export default function PokemonDetailCard(props: PokemonDetailCardProps) {
             </div>
           </div>
 
-          <div className="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4  rounded-lg border border-gray-300 ">
+          <div className="flex flex-col items-start justify-center  bg-white bg-clip-border px-3 py-4   border border-gray-300 ">
             <p className="text-sm text-gray-600">weight</p>
             <span className="text-base font-medium text-navy-700 flex">
               {props.pokemon.weight}
             </span>
           </div>
 
-          <div className="flex flex-col justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 rounded-lg border border-gray-300 ">
+          <div className="flex flex-col justify-center  bg-white bg-clip-border px-3 py-4  border border-gray-300 ">
             <p className="text-sm text-gray-600">Regular Sprites</p>
             <div className="flex justify-center">
               <Image
@@ -60,7 +60,7 @@ export default function PokemonDetailCard(props: PokemonDetailCardProps) {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 rounded-lg border border-gray-300 ">
+          <div className="flex flex-col justify-center  bg-white bg-clip-border px-3 py-4  border border-gray-300 ">
             <p className="text-sm text-gray-600">Shiny Sprites</p>
             <div className="flex justify-center">
               <Image
