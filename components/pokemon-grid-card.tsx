@@ -11,7 +11,7 @@ interface PokemonGridCardProps {
 
 export default function PokemonGridCard(props: PokemonGridCardProps) {
   return (
-    <Link href={`/${props.pokemon.id}`} key={props.pokemon.id}>
+    <Link href={`/${props.pokemon.id}`}>
       <div className="p-2 border border-gray-300 flex justify-center cursor-pointer">
         <div className="flex flex-col justify-center">
           <Image
