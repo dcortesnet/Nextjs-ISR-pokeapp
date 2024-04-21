@@ -20,7 +20,7 @@ export default async function PokemonListPage(props: PokemonListPageProps) {
       <PokeTitle title="Pokedex" />
       <PokemonSearch />
       <PokemonGrid pokemons={pokemons} />
-      <PokemonPagination />
+      <PokemonPagination pokemonPage={{ ...pokemonPage, current: page }} />
     </main>
   );
 }
