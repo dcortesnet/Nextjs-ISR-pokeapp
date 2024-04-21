@@ -1,4 +1,4 @@
-# Nextjs SSR Pokeapp &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+# Nextjs Pokeapp &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Getting Started
 

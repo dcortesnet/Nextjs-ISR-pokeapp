@@ -1,4 +1,5 @@
 import PokemonDetailCard from "@/components/pokemon-detail-card";
+import PokemonNotFound from "@/components/pokemon-not-found";
 import { getPokemonById } from "@/services/pokemon.service";
 import { Metadata } from "next";
 
@@ -11,8 +12,15 @@ export interface PokemonDetailProps {
 export async function generateMetadata(
   props: PokemonDetailProps
 ): Promise<Metadata> {
-  const { id, name } = await getPokemonById(props.params.id);
-
+  const pokemon = await getPokemonById(props.params.id);
+  if (!pokemon) {
+    return {
+      title: `#Not Found`,
+      description: "Pokemon Detail Page",
+      keywords: "Pokemon, Detail",
+    };
+  }
+  const { id, name } = pokemon;
   return {
     title: `#${id} - ${name}`,
     description: "Pokemon Detail Page",
@@ -22,5 +30,8 @@ export async function generateMetadata(
 
 export default async function PokemonDetailPage(props: PokemonDetailProps) {
   const pokemon = await getPokemonById(props.params.id);
+  if (!pokemon) {
+    return <PokemonNotFound />;
+  }
   return <PokemonDetailCard pokemon={pokemon} />;
 }

@@ -4,7 +4,7 @@ import { PokemonModel } from "@/models/pokemon.model";
 export const getPokemonPage = async (
   offset: number = 1
 ): Promise<PokemonPageModel> => {
-  offset = offset === 1 ? 0 : offset * 20;
+  offset = offset === 1 ? 0 : offset * 10;
   const response = await fetch(
     `https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`
   );
@@ -36,8 +36,28 @@ export const getPokemonsByPage = async (
   return pokemons;
 };
 
-export const getPokemonById = async (id: string) => {
-  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-  const data = await response.json();
-  return data;
+export const getPokemonById = async (
+  id: string
+): Promise<PokemonModel | null> => {
+  try {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};
+
+export const getPokemonByName = async (
+  name: string
+): Promise<PokemonModel | null> => {
+  try {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
 };
