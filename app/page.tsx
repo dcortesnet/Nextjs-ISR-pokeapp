@@ -3,6 +3,7 @@ import PokeTitle from "@/components/pokemon-title";
 import PokemonGrid from "@/components/pokemon-grid";
 import PokemonPagination from "@/components/pokemon-pagination";
 import { getPokemonPage, getPokemonsByPage } from "@/services/pokemon.service";
+import PokemonNotFound from "@/components/pokemon-not-found";
 
 interface PokemonListPageProps {
   searchParams?: {
@@ -19,8 +20,14 @@ export default async function PokemonListPage(props: PokemonListPageProps) {
     <main className="">
       <PokeTitle title="Pokedex" />
       <PokemonSearch />
-      <PokemonGrid pokemons={pokemons} />
-      <PokemonPagination pokemonPage={{ ...pokemonPage, current: page }} />
+      {pokemons.length === 0 ? (
+        <PokemonNotFound />
+      ) : (
+        <>
+          <PokemonGrid pokemons={pokemons} />
+          <PokemonPagination pokemonPage={{ ...pokemonPage, current: page }} />
+        </>
+      )}
     </main>
   );
 }
