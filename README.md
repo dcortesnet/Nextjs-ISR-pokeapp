@@ -1,5 +1,7 @@
 # Nextjs Pokeapp &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
+This is a web application developed with Next.js that utilizes the PokeAPI to display information about Pokémon. The app allows users to search for Pokémon by name and view details such as their abilities, type, stats, and more.
+
 ## Getting Started
 
 First, run the development server:
